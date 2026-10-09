@@ -1,0 +1,540 @@
+set: AZURE_CLIENT_ID
+2026-10-09T09:05:13.5064909Z 2026-10-09 09:05:13,506 INFO [azure.identity._credentials.managed_identity] ManagedIdentityCredential will use App Service managed identity with client_id: 4e0cd1da-0f8a-4bcf-aac4-465a3300827c
+2026-10-09T09:05:13.5070614Z 2026-10-09 09:05:13,506 INFO [echolib.keyvault_loader] Azure Key Vault client initialized for https://eaiciprdkeyvault.vault.azure.net/
+2026-10-09T09:05:13.5083041Z 2026-10-09 09:05:13,507 INFO [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.129.2:8081/msi/token?api-version=REDACTED&resource=REDACTED&client_id=REDACTED'
+2026-10-09T09:05:13.5083283Z Request method: 'GET'
+2026-10-09T09:05:13.5083327Z Request headers:
+2026-10-09T09:05:13.5083362Z     'X-IDENTITY-HEADER': 'REDACTED'
+2026-10-09T09:05:13.5083428Z     'Metadata': 'REDACTED'
+2026-10-09T09:05:13.5083466Z     'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.11.17 (Linux-6.6.150.1-1.azl3-x86_64-with-glibc2.41)'
+2026-10-09T09:05:13.5083503Z No body was attached to the request
+2026-10-09T09:05:13.5133454Z /usr/local/lib/python3.11/site-packages/jwt/api_jwt.py:365: InsecureKeyLengthWarning: The HMAC key is 20 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+2026-10-09T09:05:13.5133835Z   decoded = self.decode_complete(
+2026-10-09T09:05:13.5180183Z 2026-10-09 09:05:13,517 INFO [azure.core.pipeline.policies.http_logging_policy] Response status: 400
+2026-10-09T09:05:13.5180639Z Response headers:
+2026-10-09T09:05:13.5180730Z     'Content-Type': 'application/json; charset=utf-8'
+2026-10-09T09:05:13.5180872Z     'Date': 'Fri, 09 Oct 2026 09:05:12 GMT'
+2026-10-09T09:05:13.5180950Z     'Server': 'Kestrel'
+2026-10-09T09:05:13.5181019Z     'Transfer-Encoding': 'chunked'
+2026-10-09T09:05:13.5181091Z     'X-CORRELATION-ID': 'REDACTED'
+2026-10-09T09:05:13.5238166Z 2026-10-09 09:05:13,523 WARNING [azure.identity._credentials.chained] DefaultAzureCredential failed to retrieve a token from the included credentials.
+2026-10-09T09:05:13.5238800Z Attempted credentials:
+2026-10-09T09:05:13.5238868Z 	EnvironmentCredential: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+2026-10-09T09:05:13.5238947Z Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2026-10-09T09:05:13.5239005Z 	WorkloadIdentityCredential: WorkloadIdentityCredential authentication unavailable. The workload options are not fully configured. See the troubleshooting guide for more information: https://aka.ms/azsdk/python/identity/workloadidentitycredential/troubleshoot. Missing required arguments: 'tenant_id', 'token_file_path'.
+2026-10-09T09:05:13.5239114Z 	ManagedIdentityCredential: App Service managed identity configuration not found in environment. Token request error: (invalid_scope) 400, No User Assigned or Delegated Managed Identity found for specified ClientId/ResourceId/PrincipalId.
+2026-10-09T09:05:13.5239193Z 	SharedTokenCacheCredential: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2026-10-09T09:05:13.5239254Z 	VisualStudioCodeCredential: VisualStudioCodeCredential requires the 'azure-identity-broker' package to be installed. You must also ensure you have the Azure Resources extension installed and have signed in to Azure via Visual Studio Code.
+2026-10-09T09:05:13.5239315Z 	AzureCliCredential: Azure CLI not found on path
+2026-10-09T09:05:13.5239389Z 	AzurePowerShellCredential: PowerShell is not installed
+2026-10-09T09:05:13.5239451Z 	AzureDeveloperCliCredential: Azure Developer CLI could not be found. Please visit https://aka.ms/azure-dev for installation instructions and then,once installed, authenticate to your Azure account using 'azd auth login'.
+2026-10-09T09:05:13.5239494Z 	BrokerCredential: InteractiveBrowserBrokerCredential unavailable. The 'azure-identity-broker' package is required to use brokered authentication.
+2026-10-09T09:05:13.5239532Z To mitigate this issue, please refer to the troubleshooting guidelines here at https://aka.ms/azsdk/python/identity/defaultazurecredential/troubleshoot.
+2026-10-09T09:05:13.5258411Z 2026-10-09 09:05:13,525 INFO [echolib.credential_resolver] Using DB-stored API key for credential 2f39dbb3-d3a1-4637-909c-58efac580c98 (kv_error=none)
+2026-10-09T09:05:13.5269828Z 2026-10-09 09:05:13,526 INFO [echolib.model_capabilities] Reserving 12000 tokens for gpt4o: on a reasoning model this budget also pays for the tokens spent thinking, so the stated 4000 would be largely consumed before any answer is written.
+2026-10-09T09:05:13.5319739Z 2026-10-09 09:05:13,531 INFO [echolib.rate_limit] [RATE LIMIT] tracking deployment https://aiabotgpt.openai.azure.com::gpt4o::2024-12-01-preview
+2026-10-09T09:05:13.5320089Z 2026-10-09 09:05:13,531 INFO [echolib.model_capabilities] Reasoning model (gpt4o) does not accept temperature; the stated value(s) are not sent. Sampling parameters are unsupported on the GPT-5 family and the o-series.
+2026-10-09T09:05:13.6171296Z INFO:     169.254.129.1:34071 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/knowledge-bases HTTP/1.1" 200 OK
+2026-10-09T09:05:13.7779537Z INFO:     169.254.129.1:64809 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/files HTTP/1.1" 200 OK
+2026-10-09T09:05:13.8109600Z 2026-10-09 09:05:13,810 INFO [apps.markitdown.credentials] OCR vision client resolved: provider=azure model=gpt4o tier=user_cascade credential=2f39dbb3-d3a1-4637-909c-58efac580c98
+2026-10-09T09:05:14.1053634Z 2026-10-09 09:05:14,105 INFO [apps.markitdown.converter] Building MarkItDown: vision=True model=gpt4o docintel=False
+2026-10-09T09:05:15.8601504Z /usr/local/lib/python3.11/site-packages/jwt/api_jwt.py:365: InsecureKeyLengthWarning: The HMAC key is 20 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+2026-10-09T09:05:15.8602090Z   decoded = self.decode_complete(
+2026-10-09T09:05:15.8702349Z INFO:     169.254.129.1:64809 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/knowledge-bases HTTP/1.1" 200 OK
+2026-10-09T09:05:15.9107126Z INFO:     169.254.129.1:34071 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/files HTTP/1.1" 200 OK
+2026-10-09T09:05:19.0020603Z INFO:     169.254.129.1:41939 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/connectors HTTP/1.1" 200 OK
+2026-10-09T09:05:19.0008155Z INFO:     169.254.129.1:64809 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/knowledge-bases HTTP/1.1" 200 OK
+2026-10-09T09:05:19.0020603Z INFO:     169.254.129.1:41939 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/connectors HTTP/1.1" 200 OK
+2026-10-09T09:05:19.0008155Z INFO:     169.254.129.1:64809 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/knowledge-bases HTTP/1.1" 200 OK
+2026-10-09T09:05:19.0275483Z INFO:     169.254.129.1:34071 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/files HTTP/1.1" 200 OK
+2026-10-09T09:05:20.9867083Z INFO:     169.254.129.1:34071 - "GET /api/analytics/model-consumption HTTP/1.1" 200 OK
+2026-10-09T09:05:19.0275483Z INFO:     169.254.129.1:34071 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/files HTTP/1.1" 200 OK
+2026-10-09T09:05:20.9867083Z INFO:     169.254.129.1:34071 - "GET /api/analytics/model-consumption HTTP/1.1" 200 OK
+2026-10-09T09:05:23.6263445Z INFO:     169.254.129.1:41939 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/knowledge-bases HTTP/1.1" 200 OK
+2026-10-09T09:05:23.6128264Z INFO:     169.254.129.1:64809 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/connectors HTTP/1.1" 200 OK
+2026-10-09T09:05:23.6447556Z INFO:     169.254.129.1:34071 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/files HTTP/1.1" 200 OK
+2026-10-09T09:05:24.3734253Z 2026-10-09 09:05:24,373 INFO [apps.agent_trust.routes.actions] agent_trust_review_accepted
+2026-10-09T09:05:24.3735784Z 2026-10-09 09:05:24,373 INFO [apps.agent_trust.routes.actions] agent_trust_review_background_started
+2026-10-09T09:05:24.3735906Z 2026-10-09 09:05:24,373 INFO [echolib.service.agent_trust.review_service] agent_trust_review_started
+2026-10-09T09:05:24.3743629Z INFO:     169.254.129.1:34071 - "POST /agent-trust/review HTTP/1.1" 202 Accepted
+2026-10-09T09:05:24.3901552Z 2026-10-09 09:05:24,389 INFO [echolib.service.agent_trust.review_service] agent_trust_review_agent_started
+2026-10-09T09:05:24.3902205Z 2026-10-09 09:05:24,390 INFO [echolib.service.agent_trust.review_service] agent_trust_review_plan
+2026-10-09T09:05:24.4121796Z 2026-10-09 09:05:24,412 INFO [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.129.2:8081/msi/token?api-version=REDACTED&resource=REDACTED&client_id=REDACTED'
+2026-10-09T09:05:24.4122346Z Request method: 'GET'
+2026-10-09T09:05:24.4122531Z Request headers:
+2026-10-09T09:05:24.4122586Z     'X-IDENTITY-HEADER': 'REDACTED'
+2026-10-09T09:05:24.4122651Z     'Metadata': 'REDACTED'
+2026-10-09T09:05:24.4122708Z     'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.11.17 (Linux-6.6.150.1-1.azl3-x86_64-with-glibc2.41)'
+2026-10-09T09:05:24.4122773Z No body was attached to the request
+2026-10-09T09:05:24.4186558Z 2026-10-09 09:05:24,418 INFO [azure.core.pipeline.policies.http_logging_policy] Response status: 400
+2026-10-09T09:05:24.4186974Z Response headers:
+2026-10-09T09:05:24.4187033Z     'Content-Type': 'application/json; charset=utf-8'
+2026-10-09T09:05:24.4187106Z     'Date': 'Fri, 09 Oct 2026 09:05:23 GMT'
+2026-10-09T09:05:24.4187195Z     'Server': 'Kestrel'
+2026-10-09T09:05:24.4187246Z     'Transfer-Encoding': 'chunked'
+2026-10-09T09:05:24.4187299Z     'X-CORRELATION-ID': 'REDACTED'
+2026-10-09T09:05:24.4212443Z 2026-10-09 09:05:24,421 WARNING [azure.identity._credentials.chained] DefaultAzureCredential failed to retrieve a token from the included credentials.
+2026-10-09T09:05:24.4212923Z Attempted credentials:
+2026-10-09T09:05:24.4212989Z 	EnvironmentCredential: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+2026-10-09T09:05:24.4213064Z Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2026-10-09T09:05:24.4213122Z 	WorkloadIdentityCredential: WorkloadIdentityCredential authentication unavailable. The workload options are not fully configured. See the troubleshooting guide for more information: https://aka.ms/azsdk/python/identity/workloadidentitycredential/troubleshoot. Missing required arguments: 'tenant_id', 'token_file_path'.
+2026-10-09T09:05:24.4213214Z 	ManagedIdentityCredential: App Service managed identity configuration not found in environment. Token request error: (invalid_scope) 400, No User Assigned or Delegated Managed Identity found for specified ClientId/ResourceId/PrincipalId.
+2026-10-09T09:05:24.4213280Z 	SharedTokenCacheCredential: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2026-10-09T09:05:24.4213339Z 	VisualStudioCodeCredential: VisualStudioCodeCredential requires the 'azure-identity-broker' package to be installed. You must also ensure you have the Azure Resources extension installed and have signed in to Azure via Visual Studio Code.
+2026-10-09T09:05:24.4213414Z 	AzureCliCredential: Azure CLI not found on path
+2026-10-09T09:05:24.4213468Z 	AzurePowerShellCredential: PowerShell is not installed
+2026-10-09T09:05:24.4213526Z 	AzureDeveloperCliCredential: Azure Developer CLI could not be found. Please visit https://aka.ms/azure-dev for installation instructions and then,once installed, authenticate to your Azure account using 'azd auth login'.
+2026-10-09T09:05:24.4213590Z 	BrokerCredential: InteractiveBrowserBrokerCredential unavailable. The 'azure-identity-broker' package is required to use brokered authentication.
+2026-10-09T09:05:24.4213663Z To mitigate this issue, please refer to the troubleshooting guidelines here at https://aka.ms/azsdk/python/identity/defaultazurecredential/troubleshoot.
+2026-10-09T09:05:24.4216689Z 2026-10-09 09:05:24,421 INFO [echolib.credential_resolver] Using DB-stored API key for credential 8e8240a1-af2e-4b52-9827-c634baf9dc73 (kv_error=none)
+2026-10-09T09:05:24.4351843Z 2026-10-09 09:05:24,435 INFO [echolib.service.token_governance_service] [TOKEN GOVERNANCE] email=ashnamuthappa@kpmg.com role=super_admin daily=0/10000000 monthly=4941561/300000000
+2026-10-09T09:05:24.4370694Z 2026-10-09 09:05:24,436 INFO [echolib.service.token_governance_service] [TOKEN GOVERNANCE] exempt user bypass email=ashnamuthappa@kpmg.com role=super_admin
+2026-10-09T09:05:24.4380029Z 2026-10-09 09:05:24,437 INFO [echolib.rate_limit] [RATE LIMIT] tracking deployment https://api.workbench.kpmg::gpt-5-2025-08-07-dzs-sdc::
+2026-10-09T09:05:24.4380747Z 2026-10-09 09:05:24,437 INFO [echolib.model_capabilities] Reasoning model (gpt-5-2025-08-07-dzs-sdc) does not accept temperature; the stated value(s) are not sent. Sampling parameters are unsupported on the GPT-5 family and the o-series.
+2026-10-09T09:05:24.4615764Z 2026-10-09 09:05:24,461 INFO [echolib.llm_resolver] llm_resolved
+2026-10-09T09:05:24.4620111Z 2026-10-09 09:05:24,461 INFO [echolib.rate_limit] 
+2026-10-09T09:05:24.4620317Z   *** [TPM] https://api.workbench.kpmg::gpt-5-2025-08-07-dzs-sdc::
+2026-10-09T09:05:24.4620364Z       # call            : gpt-5-2025-08-07-dzs-sdc
+2026-10-09T09:05:24.4620399Z       # this call       : ~6,268 tokens (prompt + reserved output)
+2026-10-09T09:05:24.4620446Z       # sent, last 60s  : 0 of not yet learned usable (quota not yet learned/min)
+2026-10-09T09:05:24.4620496Z       # provider says   : not yet reported tokens remaining
+2026-10-09T09:05:24.4620529Z       # in flight       : 1 call(s), average call ~unknown tokens
+2026-10-09T09:05:24.4620571Z       # decision        : ADMIT now
+2026-10-09T09:05:24.4620654Z   ***
+2026-10-09T09:05:24.7152346Z 2026-10-09 09:05:24,712 WARNING [echolib.service.agent_trust.judge_llm] judge_llm_failed
+2026-10-09T09:05:24.7152948Z Traceback (most recent call last):
+2026-10-09T09:05:24.7153010Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+2026-10-09T09:05:24.7153156Z     yield
+2026-10-09T09:05:24.7153224Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+2026-10-09T09:05:24.7153387Z     resp = await self._pool.handle_async_request(req)
+2026-10-09T09:05:24.7153430Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7153470Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+2026-10-09T09:05:24.7153512Z     raise exc from None
+2026-10-09T09:05:24.7153564Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+2026-10-09T09:05:24.7153604Z     response = await connection.handle_async_request(
+2026-10-09T09:05:24.7153640Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7153678Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+2026-10-09T09:05:24.7153787Z     raise exc
+2026-10-09T09:05:24.7153852Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+2026-10-09T09:05:24.7153919Z     stream = await self._connect(request)
+2026-10-09T09:05:24.7153987Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7154058Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 156, in _connect
+2026-10-09T09:05:24.7154146Z     stream = await stream.start_tls(**kwargs)
+2026-10-09T09:05:24.7154207Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7154264Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+2026-10-09T09:05:24.7154322Z     with map_exceptions(exc_map):
+2026-10-09T09:05:24.7154393Z   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+2026-10-09T09:05:24.7154460Z     self.gen.throw(typ, value, traceback)
+2026-10-09T09:05:24.7154521Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+2026-10-09T09:05:24.7154588Z     raise to_exc(exc) from exc
+2026-10-09T09:05:24.7154648Z httpcore.ConnectError
+2026-10-09T09:05:24.7154713Z 
+2026-10-09T09:05:24.7154776Z The above exception was the direct cause of the following exception:
+2026-10-09T09:05:24.7154833Z 
+2026-10-09T09:05:24.7154885Z Traceback (most recent call last):
+2026-10-09T09:05:24.7154944Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1604, in request
+2026-10-09T09:05:24.7155023Z     response = await self._client.send(
+2026-10-09T09:05:24.7155110Z                ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7155170Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+2026-10-09T09:05:24.7155237Z     response = await self._send_handling_auth(
+2026-10-09T09:05:24.7155319Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7155383Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+2026-10-09T09:05:24.7155452Z     response = await self._send_handling_redirects(
+2026-10-09T09:05:24.7155512Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7155589Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+2026-10-09T09:05:24.7155658Z     response = await self._send_single_request(request)
+2026-10-09T09:05:24.7155716Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7155777Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+2026-10-09T09:05:24.7155842Z     response = await transport.handle_async_request(request)
+2026-10-09T09:05:24.7155912Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7155979Z   File "/usr/local/lib/python3.11/site-packages/opentelemetry/instrumentation/httpx/__init__.py", line 1455, in _handle_async_request_wrapper
+2026-10-09T09:05:24.7156051Z     raise exception.with_traceback(exception.__traceback__)
+2026-10-09T09:05:24.7156115Z   File "/usr/local/lib/python3.11/site-packages/opentelemetry/instrumentation/httpx/__init__.py", line 1410, in _handle_async_request_wrapper
+2026-10-09T09:05:24.7156194Z     response = await wrapped(*args, **kwargs)
+2026-10-09T09:05:24.7156252Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7156315Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+2026-10-09T09:05:24.7156382Z     with map_httpcore_exceptions():
+2026-10-09T09:05:24.7156456Z   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+2026-10-09T09:05:24.7156520Z     self.gen.throw(typ, value, traceback)
+2026-10-09T09:05:24.7156585Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+2026-10-09T09:05:24.7156651Z     raise mapped_exc(message) from exc
+2026-10-09T09:05:24.7156720Z httpx.ConnectError
+2026-10-09T09:05:24.7156774Z 
+2026-10-09T09:05:24.7156832Z The above exception was the direct cause of the following exception:
+2026-10-09T09:05:24.7156888Z 
+2026-10-09T09:05:24.7156946Z Traceback (most recent call last):
+2026-10-09T09:05:24.7157006Z   File "/app/echolib/service/agent_trust/judge_llm.py", line 126, in ask_judge
+2026-10-09T09:05:24.7157084Z     response = await llm.ainvoke(
+2026-10-09T09:05:24.7157142Z                ^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7157205Z   File "/app/echolib/otel.py", line 750, in ainvoke
+2026-10-09T09:05:24.7157286Z     result = await self._llm.ainvoke(
+2026-10-09T09:05:24.7157556Z              ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7157628Z   File "/app/echolib/llm_client_builder_v2.py", line 586, in ainvoke
+2026-10-09T09:05:24.7157696Z     return self._learn(await self._llm.ainvoke(*args, **kwargs), ticket)
+2026-10-09T09:05:24.7157773Z                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7157842Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 425, in ainvoke
+2026-10-09T09:05:24.7157908Z     llm_result = await self.agenerate_prompt(
+2026-10-09T09:05:24.7157969Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7158046Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1134, in agenerate_prompt
+2026-10-09T09:05:24.7158111Z     return await self.agenerate(
+2026-10-09T09:05:24.7158174Z            ^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7158238Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1092, in agenerate
+2026-10-09T09:05:24.7158314Z     raise exceptions[0]
+2026-10-09T09:05:24.7158378Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1361, in _agenerate_with_cache
+2026-10-09T09:05:24.7158449Z     result = await self._agenerate(
+2026-10-09T09:05:24.7158504Z              ^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7158575Z   File "/usr/local/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1758, in _agenerate
+2026-10-09T09:05:24.7158639Z     _handle_openai_api_error(e)
+2026-10-09T09:05:24.7158697Z   File "/usr/local/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1751, in _agenerate
+2026-10-09T09:05:24.7158758Z     raw_response = await self.async_client.with_raw_response.create(
+2026-10-09T09:05:24.7158816Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7158902Z   File "/usr/local/lib/python3.11/site-packages/openai/_legacy_response.py", line 384, in wrapped
+2026-10-09T09:05:24.7158970Z     return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+2026-10-09T09:05:24.7159034Z                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7159096Z   File "/usr/local/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2714, in create
+2026-10-09T09:05:24.7159187Z     return await self._post(
+2026-10-09T09:05:24.7159248Z            ^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7159312Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1884, in post
+2026-10-09T09:05:24.7159498Z     return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+2026-10-09T09:05:24.7159580Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.7159642Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1636, in request
+2026-10-09T09:05:24.7159709Z     raise APIConnectionError(request=request) from err
+2026-10-09T09:05:24.7159783Z openai.APIConnectionError: Connection error.
+2026-10-09T09:05:24.7159865Z 2026-10-09 09:05:24,715 WARNING [echolib.service.agent_trust.policy_service] Policy judge failed for agent 383db4d5323241cca18345bfc1bdfadd: Expected a JSON array of verdicts
+2026-10-09T09:05:24.7159917Z 2026-10-09 09:05:24,715 WARNING [echolib.service.agent_trust.review_service] agent_trust_automatic_policy_selection_failed
+2026-10-09T09:05:24.7227816Z 2026-10-09 09:05:24,722 INFO [echolib.service.agent_trust.review_service] agent_trust_identity_check_started
+2026-10-09T09:05:24.7392140Z 2026-10-09 09:05:24,739 INFO [echolib.service.agent_trust.review_service] agent_trust_identity_check_completed
+2026-10-09T09:05:24.7517041Z 2026-10-09 09:05:24,751 INFO [apps.workflow.runtime.agent_resolution] Resolved 7 of 7 workflow agent(s): 7 from the agent record, 0 from an embedded copy, 0 unresolved
+2026-10-09T09:05:24.7517563Z 2026-10-09 09:05:24,751 INFO [apps.workflow.runtime.agent_resolution] 
+2026-10-09T09:05:24.7517635Z ################################################################################
+2026-10-09T09:05:24.7517689Z # WORKFLOW TRACE | workflow=unnamed (-) | caller=dc0514f2-d7c4-4fb5-81a6-9fc6c9a0fd9e | agents=7 resolved, 0 unresolved
+2026-10-09T09:05:24.7517767Z # *** AGENT ARB Intake, Evidence & Document 2 (agt_383db4d5323241cca18345bfc1bdfadd) | source=agent_record | config_version=4
+2026-10-09T09:05:24.7517834Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7517885Z # *** AGENT ARB Business, Requirements & Solution (agt_41294652ff52459597e3d25846beace7) | source=agent_record | config_version=3
+2026-10-09T09:05:24.7517936Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7517997Z # *** AGENT ARB Data, Security, Privacy & (agt_c2740584b13a48ceaecc65ba14e9387b) | source=agent_record | config_version=3
+2026-10-09T09:05:24.7518050Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7518098Z # *** AGENT ARB Technology, Operations, Governance & (agt_75d481d2f6774421903c0a29856e9c9c) | source=agent_record | config_version=3
+2026-10-09T09:05:24.7518148Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7518198Z # *** AGENT ARB Consolidation, Consistency & Quality (agt_81341f85d95c4d28b843d20c4684f8c4) | source=agent_record | config_version=3
+2026-10-09T09:05:24.7518259Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7518307Z # *** AGENT ARB Report Composition Agent (agt_b15bb43216df4cbab20451e18664a1b7) | source=agent_record | config_version=5
+2026-10-09T09:05:24.7518352Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7518399Z # *** AGENT ARB Word Document Generation Agent 2 (agt_d2d6be338776412d8e0aacf645719c2d) | source=agent_record | config_version=2
+2026-10-09T09:05:24.7518454Z # ***   stored: gate OFF | 0 connector(s) | 0 knowledge base(s) | 0 document(s)
+2026-10-09T09:05:24.7518500Z ################################################################################
+2026-10-09T09:05:24.7563297Z 2026-10-09 09:05:24,756 INFO [echolib.service.agent_trust.review_service] agent_trust_policy_checks_started
+2026-10-09T09:05:24.7620544Z 2026-10-09 09:05:24,761 INFO [echolib.service.agent_trust.review_service] agent_trust_policy_checks_completed
+2026-10-09T09:05:24.7665250Z 2026-10-09 09:05:24,766 INFO [echolib.service.agent_trust.review_service] agent_trust_security_tests_started
+2026-10-09T09:05:24.7814665Z 2026-10-09 09:05:24,781 INFO [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.129.2:8081/msi/token?api-version=REDACTED&resource=REDACTED&client_id=REDACTED'
+2026-10-09T09:05:24.7815256Z Request method: 'GET'
+2026-10-09T09:05:24.7815357Z Request headers:
+2026-10-09T09:05:24.7815422Z     'X-IDENTITY-HEADER': 'REDACTED'
+2026-10-09T09:05:24.7815495Z     'Metadata': 'REDACTED'
+2026-10-09T09:05:24.7815544Z     'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.11.17 (Linux-6.6.150.1-1.azl3-x86_64-with-glibc2.41)'
+2026-10-09T09:05:24.7815593Z No body was attached to the request
+2026-10-09T09:05:24.7859207Z 2026-10-09 09:05:24,785 INFO [azure.core.pipeline.policies.http_logging_policy] Response status: 400
+2026-10-09T09:05:24.7859450Z Response headers:
+2026-10-09T09:05:24.7859493Z     'Content-Type': 'application/json; charset=utf-8'
+2026-10-09T09:05:24.7859570Z     'Date': 'Fri, 09 Oct 2026 09:05:23 GMT'
+2026-10-09T09:05:24.7859606Z     'Server': 'Kestrel'
+2026-10-09T09:05:24.7859643Z     'Transfer-Encoding': 'chunked'
+2026-10-09T09:05:24.7859675Z     'X-CORRELATION-ID': 'REDACTED'
+2026-10-09T09:05:24.7886358Z 2026-10-09 09:05:24,788 WARNING [azure.identity._credentials.chained] DefaultAzureCredential failed to retrieve a token from the included credentials.
+2026-10-09T09:05:24.7886500Z Attempted credentials:
+2026-10-09T09:05:24.7886542Z 	EnvironmentCredential: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+2026-10-09T09:05:24.7886590Z Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2026-10-09T09:05:24.7886642Z 	WorkloadIdentityCredential: WorkloadIdentityCredential authentication unavailable. The workload options are not fully configured. See the troubleshooting guide for more information: https://aka.ms/azsdk/python/identity/workloadidentitycredential/troubleshoot. Missing required arguments: 'tenant_id', 'token_file_path'.
+2026-10-09T09:05:24.7886696Z 	ManagedIdentityCredential: App Service managed identity configuration not found in environment. Token request error: (invalid_scope) 400, No User Assigned or Delegated Managed Identity found for specified ClientId/ResourceId/PrincipalId.
+2026-10-09T09:05:24.7886735Z 	SharedTokenCacheCredential: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2026-10-09T09:05:24.7886781Z 	VisualStudioCodeCredential: VisualStudioCodeCredential requires the 'azure-identity-broker' package to be installed. You must also ensure you have the Azure Resources extension installed and have signed in to Azure via Visual Studio Code.
+2026-10-09T09:05:24.7886829Z 	AzureCliCredential: Azure CLI not found on path
+2026-10-09T09:05:24.7886931Z 	AzurePowerShellCredential: PowerShell is not installed
+2026-10-09T09:05:24.7886994Z 	AzureDeveloperCliCredential: Azure Developer CLI could not be found. Please visit https://aka.ms/azure-dev for installation instructions and then,once installed, authenticate to your Azure account using 'azd auth login'.
+2026-10-09T09:05:24.7887073Z 	BrokerCredential: InteractiveBrowserBrokerCredential unavailable. The 'azure-identity-broker' package is required to use brokered authentication.
+2026-10-09T09:05:24.7887171Z To mitigate this issue, please refer to the troubleshooting guidelines here at https://aka.ms/azsdk/python/identity/defaultazurecredential/troubleshoot.
+2026-10-09T09:05:24.7890593Z 2026-10-09 09:05:24,788 INFO [echolib.credential_resolver] Using DB-stored API key for credential 8e8240a1-af2e-4b52-9827-c634baf9dc73 (kv_error=none)
+2026-10-09T09:05:24.8072160Z 2026-10-09 09:05:24,807 INFO [echolib.service.token_governance_service] [TOKEN GOVERNANCE] email=ashnamuthappa@kpmg.com role=super_admin daily=0/10000000 monthly=4941561/300000000
+2026-10-09T09:05:24.8087041Z 2026-10-09 09:05:24,808 INFO [echolib.service.token_governance_service] [TOKEN GOVERNANCE] exempt user bypass email=ashnamuthappa@kpmg.com role=super_admin
+2026-10-09T09:05:24.8096539Z 2026-10-09 09:05:24,809 INFO [echolib.model_capabilities] Reasoning model (gpt-5-2025-08-07-dzs-sdc) does not accept temperature; the stated value(s) are not sent. Sampling parameters are unsupported on the GPT-5 family and the o-series.
+2026-10-09T09:05:24.8104506Z 2026-10-09 09:05:24,810 INFO [echolib.llm_resolver] llm_resolved
+2026-10-09T09:05:24.8109000Z 2026-10-09 09:05:24,810 INFO [echolib.rate_limit] 
+2026-10-09T09:05:24.8109126Z   *** [TPM] https://api.workbench.kpmg::gpt-5-2025-08-07-dzs-sdc::
+2026-10-09T09:05:24.8109182Z       # call            : gpt-5-2025-08-07-dzs-sdc
+2026-10-09T09:05:24.8109230Z       # this call       : ~6,251 tokens (prompt + reserved output)
+2026-10-09T09:05:24.8109373Z       # sent, last 60s  : 6,268 of not yet learned usable (quota not yet learned/min)
+2026-10-09T09:05:24.8109427Z       # provider says   : not yet reported tokens remaining
+2026-10-09T09:05:24.8109473Z       # in flight       : 1 call(s), average call ~6,268 tokens
+2026-10-09T09:05:24.8109517Z       # decision        : ADMIT now
+2026-10-09T09:05:24.8109570Z   ***
+2026-10-09T09:05:24.8242440Z 2026-10-09 09:05:24,822 WARNING [echolib.service.agent_trust.judge_llm] judge_llm_failed
+2026-10-09T09:05:24.8242961Z Traceback (most recent call last):
+2026-10-09T09:05:24.8243021Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+2026-10-09T09:05:24.8243096Z     yield
+2026-10-09T09:05:24.8243198Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+2026-10-09T09:05:24.8243252Z     resp = await self._pool.handle_async_request(req)
+2026-10-09T09:05:24.8243299Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8243347Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+2026-10-09T09:05:24.8243406Z     raise exc from None
+2026-10-09T09:05:24.8243455Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+2026-10-09T09:05:24.8243504Z     response = await connection.handle_async_request(
+2026-10-09T09:05:24.8243548Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8244059Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+2026-10-09T09:05:24.8244126Z     raise exc
+2026-10-09T09:05:24.8244174Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+2026-10-09T09:05:24.8244496Z     stream = await self._connect(request)
+2026-10-09T09:05:24.8244546Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8244605Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 156, in _connect
+2026-10-09T09:05:24.8244655Z     stream = await stream.start_tls(**kwargs)
+2026-10-09T09:05:24.8244700Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8244747Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+2026-10-09T09:05:24.8244804Z     with map_exceptions(exc_map):
+2026-10-09T09:05:24.8244851Z   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+2026-10-09T09:05:24.8244901Z     self.gen.throw(typ, value, traceback)
+2026-10-09T09:05:24.8244948Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+2026-10-09T09:05:24.8244995Z     raise to_exc(exc) from exc
+2026-10-09T09:05:24.8245057Z httpcore.ConnectError
+2026-10-09T09:05:24.8245097Z 
+2026-10-09T09:05:24.8245144Z The above exception was the direct cause of the following exception:
+2026-10-09T09:05:24.8245186Z 
+2026-10-09T09:05:24.8245228Z Traceback (most recent call last):
+2026-10-09T09:05:24.8245283Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1604, in request
+2026-10-09T09:05:24.8245332Z     response = await self._client.send(
+2026-10-09T09:05:24.8245374Z                ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8245420Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+2026-10-09T09:05:24.8245479Z     response = await self._send_handling_auth(
+2026-10-09T09:05:24.8245526Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8245574Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+2026-10-09T09:05:24.8245626Z     response = await self._send_handling_redirects(
+2026-10-09T09:05:24.8245669Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8245726Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+2026-10-09T09:05:24.8245776Z     response = await self._send_single_request(request)
+2026-10-09T09:05:24.8245822Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8245868Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+2026-10-09T09:05:24.8245927Z     response = await transport.handle_async_request(request)
+2026-10-09T09:05:24.8245974Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8246025Z   File "/usr/local/lib/python3.11/site-packages/opentelemetry/instrumentation/httpx/__init__.py", line 1455, in _handle_async_request_wrapper
+2026-10-09T09:05:24.8246077Z     raise exception.with_traceback(exception.__traceback__)
+2026-10-09T09:05:24.8246137Z   File "/usr/local/lib/python3.11/site-packages/opentelemetry/instrumentation/httpx/__init__.py", line 1410, in _handle_async_request_wrapper
+2026-10-09T09:05:24.8246191Z     response = await wrapped(*args, **kwargs)
+2026-10-09T09:05:24.8246236Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8246284Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+2026-10-09T09:05:24.8246342Z     with map_httpcore_exceptions():
+2026-10-09T09:05:24.8246389Z   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+2026-10-09T09:05:24.8246437Z     self.gen.throw(typ, value, traceback)
+2026-10-09T09:05:24.8246486Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+2026-10-09T09:05:24.8246545Z     raise mapped_exc(message) from exc
+2026-10-09T09:05:24.8246588Z httpx.ConnectError
+2026-10-09T09:05:24.8246629Z 
+2026-10-09T09:05:24.8246674Z The above exception was the direct cause of the following exception:
+2026-10-09T09:05:24.8246716Z 
+2026-10-09T09:05:24.8246767Z Traceback (most recent call last):
+2026-10-09T09:05:24.8246814Z   File "/app/echolib/service/agent_trust/judge_llm.py", line 126, in ask_judge
+2026-10-09T09:05:24.8246863Z     response = await llm.ainvoke(
+2026-10-09T09:05:24.8246907Z                ^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8246952Z   File "/app/echolib/otel.py", line 750, in ainvoke
+2026-10-09T09:05:24.8247009Z     result = await self._llm.ainvoke(
+2026-10-09T09:05:24.8247350Z              ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8247521Z   File "/app/echolib/llm_client_builder_v2.py", line 586, in ainvoke
+2026-10-09T09:05:24.8247602Z     return self._learn(await self._llm.ainvoke(*args, **kwargs), ticket)
+2026-10-09T09:05:24.8247689Z                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8247753Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 425, in ainvoke
+2026-10-09T09:05:24.8247818Z     llm_result = await self.agenerate_prompt(
+2026-10-09T09:05:24.8247871Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8247941Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1134, in agenerate_prompt
+2026-10-09T09:05:24.8248004Z     return await self.agenerate(
+2026-10-09T09:05:24.8248057Z            ^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8248115Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1092, in agenerate
+2026-10-09T09:05:24.8248179Z     raise exceptions[0]
+2026-10-09T09:05:24.8248256Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1361, in _agenerate_with_cache
+2026-10-09T09:05:24.8248330Z     result = await self._agenerate(
+2026-10-09T09:05:24.8248382Z              ^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8248431Z   File "/usr/local/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1758, in _agenerate
+2026-10-09T09:05:24.8248501Z     _handle_openai_api_error(e)
+2026-10-09T09:05:24.8248552Z   File "/usr/local/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1751, in _agenerate
+2026-10-09T09:05:24.8248607Z     raw_response = await self.async_client.with_raw_response.create(
+2026-10-09T09:05:24.8248658Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8249255Z   File "/usr/local/lib/python3.11/site-packages/openai/_legacy_response.py", line 384, in wrapped
+2026-10-09T09:05:24.8249592Z     return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+2026-10-09T09:05:24.8249666Z                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8249731Z   File "/usr/local/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2714, in create
+2026-10-09T09:05:24.8249821Z     return await self._post(
+2026-10-09T09:05:24.8249881Z            ^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8249948Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1884, in post
+2026-10-09T09:05:24.8250020Z     return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+2026-10-09T09:05:24.8250097Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8250159Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1636, in request
+2026-10-09T09:05:24.8250247Z     raise APIConnectionError(request=request) from err
+2026-10-09T09:05:24.8250359Z openai.APIConnectionError: Connection error.
+2026-10-09T09:05:24.8360394Z 2026-10-09 09:05:24,835 WARNING [echolib.service.agent_trust.review_service] agent_trust_security_stage_failed
+2026-10-09T09:05:24.8360718Z Traceback (most recent call last):
+2026-10-09T09:05:24.8360774Z   File "/app/echolib/service/agent_trust/review_service.py", line 685, in _run_security
+2026-10-09T09:05:24.8360840Z     results = await self._testing.run_red_team(
+2026-10-09T09:05:24.8360884Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8360940Z   File "/app/echolib/service/agent_trust/testing_service.py", line 1044, in run_red_team
+2026-10-09T09:05:24.8360992Z     review_attacks = await self._review_security_payloads(
+2026-10-09T09:05:24.8361040Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8361086Z   File "/app/echolib/service/agent_trust/testing_service.py", line 992, in _review_security_payloads
+2026-10-09T09:05:24.8361140Z     raise JudgeParseError("Expected a JSON object containing a tests array")
+2026-10-09T09:05:24.8361201Z echolib.service.agent_trust.judge_llm.JudgeParseError: Expected a JSON object containing a tests array
+2026-10-09T09:05:24.8407747Z 2026-10-09 09:05:24,840 INFO [echolib.service.agent_trust.review_service] agent_trust_functional_tests_started
+2026-10-09T09:05:24.8423518Z 2026-10-09 09:05:24,842 INFO [echolib.service.agent_trust.testing_service] recommended_test_suite_generation_started
+2026-10-09T09:05:24.8528405Z 2026-10-09 09:05:24,852 INFO [azure.core.pipeline.policies.http_logging_policy] Request URL: 'http://169.254.129.2:8081/msi/token?api-version=REDACTED&resource=REDACTED&client_id=REDACTED'
+2026-10-09T09:05:24.8528805Z Request method: 'GET'
+2026-10-09T09:05:24.8528881Z Request headers:
+2026-10-09T09:05:24.8528936Z     'X-IDENTITY-HEADER': 'REDACTED'
+2026-10-09T09:05:24.8529028Z     'Metadata': 'REDACTED'
+2026-10-09T09:05:24.8529084Z     'User-Agent': 'azsdk-python-identity/1.25.3 Python/3.11.17 (Linux-6.6.150.1-1.azl3-x86_64-with-glibc2.41)'
+2026-10-09T09:05:24.8529147Z No body was attached to the request
+2026-10-09T09:05:24.8575214Z 2026-10-09 09:05:24,857 INFO [azure.core.pipeline.policies.http_logging_policy] Response status: 400
+2026-10-09T09:05:24.8575415Z Response headers:
+2026-10-09T09:05:24.8575462Z     'Content-Type': 'application/json; charset=utf-8'
+2026-10-09T09:05:24.8575517Z     'Date': 'Fri, 09 Oct 2026 09:05:24 GMT'
+2026-10-09T09:05:24.8575569Z     'Server': 'Kestrel'
+2026-10-09T09:05:24.8575679Z     'Transfer-Encoding': 'chunked'
+2026-10-09T09:05:24.8575762Z     'X-CORRELATION-ID': 'REDACTED'
+2026-10-09T09:05:24.8602257Z 2026-10-09 09:05:24,860 WARNING [azure.identity._credentials.chained] DefaultAzureCredential failed to retrieve a token from the included credentials.
+2026-10-09T09:05:24.8602519Z Attempted credentials:
+2026-10-09T09:05:24.8602580Z 	EnvironmentCredential: EnvironmentCredential authentication unavailable. Environment variables are not fully configured.
+2026-10-09T09:05:24.8602673Z Visit https://aka.ms/azsdk/python/identity/environmentcredential/troubleshoot to troubleshoot this issue.
+2026-10-09T09:05:24.8602734Z 	WorkloadIdentityCredential: WorkloadIdentityCredential authentication unavailable. The workload options are not fully configured. See the troubleshooting guide for more information: https://aka.ms/azsdk/python/identity/workloadidentitycredential/troubleshoot. Missing required arguments: 'tenant_id', 'token_file_path'.
+2026-10-09T09:05:24.8602810Z 	ManagedIdentityCredential: App Service managed identity configuration not found in environment. Token request error: (invalid_scope) 400, No User Assigned or Delegated Managed Identity found for specified ClientId/ResourceId/PrincipalId.
+2026-10-09T09:05:24.8602982Z 	SharedTokenCacheCredential: SharedTokenCacheCredential authentication unavailable. No accounts were found in the cache.
+2026-10-09T09:05:24.8603045Z 	VisualStudioCodeCredential: VisualStudioCodeCredential requires the 'azure-identity-broker' package to be installed. You must also ensure you have the Azure Resources extension installed and have signed in to Azure via Visual Studio Code.
+2026-10-09T09:05:24.8603101Z 	AzureCliCredential: Azure CLI not found on path
+2026-10-09T09:05:24.8603152Z 	AzurePowerShellCredential: PowerShell is not installed
+2026-10-09T09:05:24.8603219Z 	AzureDeveloperCliCredential: Azure Developer CLI could not be found. Please visit https://aka.ms/azure-dev for installation instructions and then,once installed, authenticate to your Azure account using 'azd auth login'.
+2026-10-09T09:05:24.8603282Z 	BrokerCredential: InteractiveBrowserBrokerCredential unavailable. The 'azure-identity-broker' package is required to use brokered authentication.
+2026-10-09T09:05:24.8603340Z To mitigate this issue, please refer to the troubleshooting guidelines here at https://aka.ms/azsdk/python/identity/defaultazurecredential/troubleshoot.
+2026-10-09T09:05:24.8606912Z 2026-10-09 09:05:24,860 INFO [echolib.credential_resolver] Using DB-stored API key for credential 8e8240a1-af2e-4b52-9827-c634baf9dc73 (kv_error=none)
+2026-10-09T09:05:24.8729836Z 2026-10-09 09:05:24,872 INFO [echolib.service.token_governance_service] [TOKEN GOVERNANCE] email=ashnamuthappa@kpmg.com role=super_admin daily=0/10000000 monthly=4941561/300000000
+2026-10-09T09:05:24.8738772Z 2026-10-09 09:05:24,873 INFO [echolib.service.token_governance_service] [TOKEN GOVERNANCE] exempt user bypass email=ashnamuthappa@kpmg.com role=super_admin
+2026-10-09T09:05:24.8746221Z 2026-10-09 09:05:24,874 INFO [echolib.model_capabilities] Reasoning model (gpt-5-2025-08-07-dzs-sdc) does not accept temperature; the stated value(s) are not sent. Sampling parameters are unsupported on the GPT-5 family and the o-series.
+2026-10-09T09:05:24.8751627Z 2026-10-09 09:05:24,875 INFO [echolib.llm_resolver] llm_resolved
+2026-10-09T09:05:24.8755580Z 2026-10-09 09:05:24,875 INFO [echolib.rate_limit] 
+2026-10-09T09:05:24.8755819Z   *** [TPM] https://api.workbench.kpmg::gpt-5-2025-08-07-dzs-sdc::
+2026-10-09T09:05:24.8755908Z       # call            : gpt-5-2025-08-07-dzs-sdc
+2026-10-09T09:05:24.8755966Z       # this call       : ~6,120 tokens (prompt + reserved output)
+2026-10-09T09:05:24.8756026Z       # sent, last 60s  : 12,519 of not yet learned usable (quota not yet learned/min)
+2026-10-09T09:05:24.8756061Z       # provider says   : not yet reported tokens remaining
+2026-10-09T09:05:24.8756104Z       # in flight       : 1 call(s), average call ~6,262 tokens
+2026-10-09T09:05:24.8756137Z       # decision        : ADMIT now
+2026-10-09T09:05:24.8756217Z   ***
+2026-10-09T09:05:24.8895610Z 2026-10-09 09:05:24,887 WARNING [echolib.service.agent_trust.judge_llm] judge_llm_failed
+2026-10-09T09:05:24.8896522Z Traceback (most recent call last):
+2026-10-09T09:05:24.8896657Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+2026-10-09T09:05:24.8896817Z     yield
+2026-10-09T09:05:24.8896873Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+2026-10-09T09:05:24.8896927Z     resp = await self._pool.handle_async_request(req)
+2026-10-09T09:05:24.8896988Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8897034Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+2026-10-09T09:05:24.8897085Z     raise exc from None
+2026-10-09T09:05:24.8897131Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+2026-10-09T09:05:24.8897186Z     response = await connection.handle_async_request(
+2026-10-09T09:05:24.8897246Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8897297Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+2026-10-09T09:05:24.8897346Z     raise exc
+2026-10-09T09:05:24.8897395Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+2026-10-09T09:05:24.8897466Z     stream = await self._connect(request)
+2026-10-09T09:05:24.8897520Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8897583Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_async/connection.py", line 156, in _connect
+2026-10-09T09:05:24.8897644Z     stream = await stream.start_tls(**kwargs)
+2026-10-09T09:05:24.8897733Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8897795Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+2026-10-09T09:05:24.8897883Z     with map_exceptions(exc_map):
+2026-10-09T09:05:24.8897936Z   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+2026-10-09T09:05:24.8897999Z     self.gen.throw(typ, value, traceback)
+2026-10-09T09:05:24.8898067Z   File "/usr/local/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+2026-10-09T09:05:24.8898130Z     raise to_exc(exc) from exc
+2026-10-09T09:05:24.8898177Z httpcore.ConnectError
+2026-10-09T09:05:24.8898609Z 
+2026-10-09T09:05:24.8898685Z The above exception was the direct cause of the following exception:
+2026-10-09T09:05:24.8898757Z 
+2026-10-09T09:05:24.8898808Z Traceback (most recent call last):
+2026-10-09T09:05:24.8898865Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1604, in request
+2026-10-09T09:05:24.8898923Z     response = await self._client.send(
+2026-10-09T09:05:24.8898983Z                ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8899058Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1629, in send
+2026-10-09T09:05:24.8899197Z     response = await self._send_handling_auth(
+2026-10-09T09:05:24.8899248Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8899306Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+2026-10-09T09:05:24.8899372Z     response = await self._send_handling_redirects(
+2026-10-09T09:05:24.8899425Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8899499Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+2026-10-09T09:05:24.8899560Z     response = await self._send_single_request(request)
+2026-10-09T09:05:24.8899616Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8899670Z   File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1730, in _send_single_request
+2026-10-09T09:05:24.8899725Z     response = await transport.handle_async_request(request)
+2026-10-09T09:05:24.8921566Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8921683Z   File "/usr/local/lib/python3.11/site-packages/opentelemetry/instrumentation/httpx/__init__.py", line 1455, in _handle_async_request_wrapper
+2026-10-09T09:05:24.8921753Z     raise exception.with_traceback(exception.__traceback__)
+2026-10-09T09:05:24.8921806Z   File "/usr/local/lib/python3.11/site-packages/opentelemetry/instrumentation/httpx/__init__.py", line 1410, in _handle_async_request_wrapper
+2026-10-09T09:05:24.8921873Z     response = await wrapped(*args, **kwargs)
+2026-10-09T09:05:24.8921921Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8921976Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+2026-10-09T09:05:24.8922029Z     with map_httpcore_exceptions():
+2026-10-09T09:05:24.8922088Z   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+2026-10-09T09:05:24.8922145Z     self.gen.throw(typ, value, traceback)
+2026-10-09T09:05:24.8922198Z   File "/usr/local/lib/python3.11/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+2026-10-09T09:05:24.8922245Z     raise mapped_exc(message) from exc
+2026-10-09T09:05:24.8922300Z httpx.ConnectError
+2026-10-09T09:05:24.8922347Z 
+2026-10-09T09:05:24.8922399Z The above exception was the direct cause of the following exception:
+2026-10-09T09:05:24.8922445Z 
+2026-10-09T09:05:24.8922494Z Traceback (most recent call last):
+2026-10-09T09:05:24.8922545Z   File "/app/echolib/service/agent_trust/judge_llm.py", line 126, in ask_judge
+2026-10-09T09:05:24.8922613Z     response = await llm.ainvoke(
+2026-10-09T09:05:24.8922661Z                ^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8922710Z   File "/app/echolib/otel.py", line 750, in ainvoke
+2026-10-09T09:05:24.8922765Z     result = await self._llm.ainvoke(
+2026-10-09T09:05:24.8923023Z              ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8923094Z   File "/app/echolib/llm_client_builder_v2.py", line 586, in ainvoke
+2026-10-09T09:05:24.8923157Z     return self._learn(await self._llm.ainvoke(*args, **kwargs), ticket)
+2026-10-09T09:05:24.8923223Z                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8923297Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 425, in ainvoke
+2026-10-09T09:05:24.8923360Z     llm_result = await self.agenerate_prompt(
+2026-10-09T09:05:24.8923412Z                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8923466Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1134, in agenerate_prompt
+2026-10-09T09:05:24.8923546Z     return await self.agenerate(
+2026-10-09T09:05:24.8923604Z            ^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8923661Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1092, in agenerate
+2026-10-09T09:05:24.8923716Z     raise exceptions[0]
+2026-10-09T09:05:24.8923779Z   File "/usr/local/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1361, in _agenerate_with_cache
+2026-10-09T09:05:24.8923837Z     result = await self._agenerate(
+2026-10-09T09:05:24.8923885Z              ^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8923940Z   File "/usr/local/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1758, in _agenerate
+2026-10-09T09:05:24.8923994Z     _handle_openai_api_error(e)
+2026-10-09T09:05:24.8924059Z   File "/usr/local/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1751, in _agenerate
+2026-10-09T09:05:24.8924117Z     raw_response = await self.async_client.with_raw_response.create(
+2026-10-09T09:05:24.8924166Z                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8924497Z   File "/usr/local/lib/python3.11/site-packages/openai/_legacy_response.py", line 384, in wrapped
+2026-10-09T09:05:24.8924580Z     return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+2026-10-09T09:05:24.8924634Z                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8924694Z   File "/usr/local/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2714, in create
+2026-10-09T09:05:24.8924745Z     return await self._post(
+2026-10-09T09:05:24.8924805Z            ^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8924861Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1884, in post
+2026-10-09T09:05:24.8924915Z     return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+2026-10-09T09:05:24.8924968Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8925029Z   File "/usr/local/lib/python3.11/site-packages/openai/_base_client.py", line 1636, in request
+2026-10-09T09:05:24.8925083Z     raise APIConnectionError(request=request) from err
+2026-10-09T09:05:24.8925131Z openai.APIConnectionError: Connection error.
+2026-10-09T09:05:24.8925184Z 2026-10-09 09:05:24,889 INFO [echolib.service.agent_trust.testing_service] recommended_test_suite_generated
+2026-10-09T09:05:24.8925236Z 2026-10-09 09:05:24,889 ERROR [echolib.service.agent_trust.testing_service] recommended_test_suite_generation_failed
+2026-10-09T09:05:24.8925298Z Traceback (most recent call last):
+2026-10-09T09:05:24.8925350Z   File "/app/echolib/service/agent_trust/testing_service.py", line 500, in generate_recommended_suite
+2026-10-09T09:05:24.8925404Z     raise ValueError(
+2026-10-09T09:05:24.8925455Z ValueError: No sufficiently grounded functional test could be generated from the agent configuration.
+2026-10-09T09:05:24.8925516Z 2026-10-09 09:05:24,889 WARNING [echolib.service.agent_trust.review_service] agent_trust_automatic_functional_generation_failed
+2026-10-09T09:05:24.8925561Z Traceback (most recent call last):
+2026-10-09T09:05:24.8925609Z   File "/app/echolib/service/agent_trust/review_service.py", line 765, in _run_functional
+2026-10-09T09:05:24.8925661Z     recommendation = await self._testing.generate_recommended_suite(
+2026-10-09T09:05:24.8925739Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-09T09:05:24.8925787Z   File "/app/echolib/service/agent_trust/testing_service.py", line 500, in generate_recommended_suite
+2026-10-09T09:05:24.8925840Z     raise ValueError(
+2026-10-09T09:05:24.8925904Z ValueError: No sufficiently grounded functional test could be generated from the agent configuration.
+2026-10-09T09:05:24.8950537Z 2026-10-09 09:05:24,894 INFO [echolib.service.agent_trust.review_service] agent_trust_functional_tests_completed
+2026-10-09T09:05:24.9135808Z 2026-10-09 09:05:24,913 INFO [echolib.service.agent_trust.review_service] agent_trust_review_agent_completed
+2026-10-09T09:05:24.9138114Z 2026-10-09 09:05:24,913 INFO [echolib.service.agent_trust.review_service] agent_trust_review_completed
+2026-10-09T09:05:24.9194345Z 2026-10-09 09:05:24,919 INFO [apps.agent_trust.routes.actions] agent_trust_review_background_completed
+2026-10-09T09:05:23.6263445Z INFO:     169.254.129.1:41939 - "GET /agents/61a1d826-857a-4dc4-a247-10664723adf4/knowledge-bases 
